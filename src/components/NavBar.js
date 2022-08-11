@@ -11,9 +11,8 @@ import {
   MenuDivider,
   useColorModeValue
 } from '@chakra-ui/react';
-
-import { ImCart, ImUser, ImSwitch, ImCogs, ImWhatsapp} from "react-icons/im";
-import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+import CartWidget from './CartWidget/CartWidget.js';
+import { ImUser, ImSwitch, ImCogs, ImWhatsapp} from "react-icons/im";
 import '../styles/NavBar.css'
 const Links = ['Mujer', 'Hombre', 'Niños', 'Deportes', 'Promociones'];
 
@@ -50,7 +49,9 @@ export default function NavBar() {
           </HStack>
           <Flex alignItems={'center'}>
             <Menu>
-               <ImCart className='button-market'/>
+              <div className='button-market'>
+                <CartWidget />
+              </div>
               <MenuButton className='button'
                 as={Button}>
                 <ImUser/>
@@ -74,8 +75,6 @@ export default function NavBar() {
           </Flex>
         </Flex>
       </Box>
-
-      <Box p={4}>Main Content Here</Box>
     </>
   );
 }

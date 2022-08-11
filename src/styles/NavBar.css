@@ -15,7 +15,8 @@
     cursor:pointer;
     color: white;
     background-color: #000;
-    font-size: 40px
+    font-size: 20px;
+    margin-right: 10px;
 }
 
 .button-item{
